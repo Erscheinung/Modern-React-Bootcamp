@@ -4,15 +4,17 @@ class Game extends Component {
     constructor(props) {
         super(props);
         this.state = { // have to init state, not props
-            score: 0,
+            score: 99,
             gameOver: false
-        }
+        };
+        this.setState({score:0})
     }
-    // alternate syntax
+     // alternate syntax
     // state = {
     //     score: 0,
     //     gameOver: false
     // };
+   
     render(){
         return(
             <div>

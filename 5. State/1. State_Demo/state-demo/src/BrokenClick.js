@@ -9,6 +9,11 @@ class BrokenClick extends Component {
     handleClick(e){
         this.setState({clicked: true});
     }
+    // Alternate syntax
+    // state = { clicked: false };
+    // handleClick = (e) => {
+    //     this.setState({clicked: true});
+    // }
     render(){
         return(
             <div>

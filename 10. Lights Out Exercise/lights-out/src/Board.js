@@ -90,6 +90,9 @@ class Board extends Component {
   /** Render game board or winning message. */
 
   render() {
+    if(this.state.hasWon) {
+      return <h1>YOU WON!</h1>;
+    }
     let tblBoard = [];
     for (let y = 0; y < this.props.nrows; y++ ) {
       let row = [];
@@ -101,9 +104,14 @@ class Board extends Component {
       tblBoard.push(<tr key={y}>{row}</tr>);
     }
     return (
-      <table className="Board">
-        <tbody>{tblBoard}</tbody>
-      </table>
+      <div>
+        <div className="neon-orange">Lights</div>
+        <div className="neon-blue">Out</div>
+        <table className="Board">
+          <tbody>{tblBoard}</tbody>
+        </table>
+      </div>
+      
     )
   }
 }
